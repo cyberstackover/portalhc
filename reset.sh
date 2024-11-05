@@ -1,0 +1,1 @@
+php cachetool.phar opcache:reset

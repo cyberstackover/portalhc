@@ -1,0 +1,415 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Portal HC API Documentation",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/monitoring-pejabat/{id_angka}": {
+            "get": {
+                "tags": [
+                    "monitoring pejabat"
+                ],
+                "summary": "List Monitoring Pejabat",
+                "description": "Get list Monitoring Pejabat by id_angka",
+                "operationId": "id_angka",
+                "parameters": [
+                    {
+                        "name": "id_angka",
+                        "in": "path",
+                        "description": "ID Angka Perusahaan",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "0101"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "headers": {
+                                            "type": "object"
+                                        },
+                                        "original": {
+                                            "properties": {
+                                                "status": {
+                                                    "type": "boolean"
+                                                },
+                                                "msg": {
+                                                    "type": "string"
+                                                },
+                                                "data": {
+                                                    "properties": {
+                                                        "current_page": {
+                                                            "type": "integer"
+                                                        },
+                                                        "data": {
+                                                            "properties": {
+                                                                "0": {
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "pejabat": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "bumns": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "nama": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "nomor": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "tanggal_awal": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "tanggal_akhir": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "instansi": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "asal_instansi": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "periode": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "tanggal_sk": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "grup_jabat_nama": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "plt": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "komisaris_independen": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "aktifpejabat": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "expire": {
+                                                                            "type": "boolean"
+                                                                        },
+                                                                        "kurang3": {
+                                                                            "type": "boolean"
+                                                                        },
+                                                                        "kurang6": {
+                                                                            "type": "boolean"
+                                                                        },
+                                                                        "id_talenta": {
+                                                                            "type": "integer"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "exception": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/all-talent": {
+            "get": {
+                "tags": [
+                    "biodata"
+                ],
+                "summary": "All Biodata Talent",
+                "description": "Get All Biodata Talent",
+                "operationId": "biodataShow",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "headers": {
+                                            "type": "object"
+                                        },
+                                        "original": {
+                                            "properties": {
+                                                "status": {
+                                                    "type": "boolean"
+                                                },
+                                                "msg": {
+                                                    "type": "string"
+                                                },
+                                                "data": {
+                                                    "properties": {
+                                                        "current_page": {
+                                                            "type": "integer"
+                                                        },
+                                                        "data": {
+                                                            "properties": {
+                                                                "0": {
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "nama_lengkap": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "jenis_kelamin": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "nik": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "npwp": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "email": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "nomor_hp": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "alamat": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "suku": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "gol_darah": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "tanggal_lahir": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "tempat_lahir": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "gelar": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "first_page_url": {
+                                                            "type": "string"
+                                                        },
+                                                        "from": {
+                                                            "type": "integer"
+                                                        },
+                                                        "last_page": {
+                                                            "type": "integer"
+                                                        },
+                                                        "last_page_url": {
+                                                            "type": "string"
+                                                        },
+                                                        "next_page_url": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "per_page": {
+                                                            "type": "integer"
+                                                        },
+                                                        "prev_page_url": {
+                                                            "type": "string"
+                                                        },
+                                                        "to": {
+                                                            "type": "integer"
+                                                        },
+                                                        "total": {
+                                                            "type": "integer"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "exception": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/cv-pejabat/{id_talenta}": {
+            "get": {
+                "tags": [
+                    "CV pejabat"
+                ],
+                "summary": "Detail CV Pejabat",
+                "description": "Get Detail CV Pejabat by id talenta",
+                "operationId": "id_talenta",
+                "parameters": [
+                    {
+                        "name": "id_talenta",
+                        "in": "path",
+                        "description": "ID Talenta",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "example": "1"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "headers": {
+                                            "type": "object"
+                                        },
+                                        "original": {
+                                            "properties": {
+                                                "status": {
+                                                    "type": "boolean"
+                                                },
+                                                "msg": {
+                                                    "type": "string"
+                                                },
+                                                "data": {
+                                                    "properties": {
+                                                        "current_page": {
+                                                            "type": "integer"
+                                                        },
+                                                        "data": {
+                                                            "properties": {
+                                                                "0": {
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "pejabat": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "status_talenta": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "kategori_talenta": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "kategori_non_talenta": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "talenta_asal": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "instansi": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "asalinstansi": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "cvinterest": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "cvpajak": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "cvsummary": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datakeluarga": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datakaryailmiah": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datapenghargaan": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datakeahlian": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datapengalamanlain": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datariwayatpendidikan": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datariwayatpelatihan": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datariwayatjabatanlain": {
+                                                                            "type": "object"
+                                                                        },
+                                                                        "datariwayatorganisasi": {
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "exception": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
